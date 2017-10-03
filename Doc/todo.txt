@@ -1,0 +1,8 @@
+
+ - 
+
+ - Doplnit dokumentace k tématùm Threads, Doxygen, Makefile
+
+ - Upravit makefile tak, aby šel použít 1:1 jak pro Win, tak pro Lin.
+   (Lepší možností by bylo vyvinout konfigurátor, který by makefile generoval).
+

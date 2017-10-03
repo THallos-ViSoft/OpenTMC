@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+				<meta name="keywords" content="Why not realloc,Snippets,Dianora">
+		<link rel="shortcut icon" href="http://www.iso-9899.info/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://www.iso-9899.info/wiki/opensearch_desc.php" title="C (English)">
+		<title>Why not realloc - C</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/wiki/skins/common/shared.css?97";
+			@import "/wiki/skins/monobook/main.css?97";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="Why%20not%20realloc%20-%20C_files/commonPrint.css">
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/wiki/skins/monobook/IE50Fixes.css?97";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/wiki/skins/monobook/IE55Fixes.css?97";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/wiki/skins/monobook/IE60Fixes.css?97";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/wiki/skins/monobook/IE70Fixes.css?97";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/wiki/skins/common/IEFixes.js?97"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/wiki/skins";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/wiki";
+var wgScript = "/wiki";
+var wgServer = "http://www.iso-9899.info";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Why_not_realloc";
+var wgTitle = "Why not realloc";
+var wgAction = "view";
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgArticleId = "1600";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "8537";
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="Why%20not%20realloc%20-%20C_files/wikibits.js"><!-- wikibits js --></script>
+		<script type="text/javascript" src="Why%20not%20realloc%20-%20C_files/wiki"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/wiki?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+@import "/wiki?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+@import "/wiki?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="Why%20not%20realloc%20-%20C_files/ajax.js"></script>
+	</head>
+<body class="mediawiki ns-0 ltr page-Why_not_realloc">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Why not realloc</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From C</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p>$Id: why_not_realloc.txt,v 1.12 2009/02/22 14:55:53 db Exp db $
+</p><p><br>
+</p>
+<a name="realloc_for_the_new_C_programmer_is_probably_best_avoided_for_the_following_reasons"></a><h2> <span class="mw-headline"> realloc for the new C programmer is probably best avoided for the following reasons </span></h2>
+<p>1. realloc can leave stale pointers
+</p><p>If you have references to structures allocated by malloc, these references
+can now be bogus since realloc is free to move where it reallocates your
+memory. In other words, it can do the equivalent of a malloc, memcpy
+of your data to a new location then it frees your old memory.
+So your pointers to that object are now pointing into garbage. This can
+also lead to a security bug.
+</p><p>2. realloc can introduce unexpected time delays
+</p><p>As realloc is free to do the equivalent of a malloc, memcpy and 
+free of the original memory, this can happen at unanticpated times.
+Imagine the case where you have allocated 1mb of data and
+you decide to realloc to 1mb + 10k of data; if you are
+unlucky you will get the case where the malloc package has to alloc
+a new pointer and move your data. This might not be a problem with
+a GUI, the user just has to wait, but if it happens on a audio capture
+you could be very annoyed.  It is far easier and most likely faster to
+simply allocate another 10k of space and link it into your linked list.
+</p><p>3. Using realloc is a misunderstanding of how to do variable sized data in C
+</p><p>C is not a variant of perl/fortran or any other language with
+variable sized arrays such as python.
+One traditional C way of thinking of resizing something in C is to use
+a linked list. e.g. a linked list of char buffers. This is not the right
+data structure to use for some math problems, but is typical for
+so-called "infinite strings".
+For examples of reading a line from a stream without limits.
+[[Code_Snippets] reading a line from a stream without artificial limits ]
+</p><p>4. realloc is non portable (to a certain extent)
+</p><p>realloc as defined by ANSI is defined, but not the entire world has a ANSI 
+compliant library.  This used to be painfully obvious between SYSv and BSD.
+It is far less of a problem nowadays, but might be something
+worth considering if you have to work with an old non compliant library.
+</p><p>5. but I need to read an entire line of arbitrary length
+</p><p>There are functions available to do this already, there is no need for
+you to use realloc. Look for fgetln or getline on your system or
+on the web for <a href="http://www.iso-9899.info/wiki/Snippets#reading_a_line_from_a_stream_without_artifical_limits" title="Snippets">Snippets#reading_a_line_from_a_stream_without_artifical_limits</a> other solutions.
+</p>
+<a name="You.27ve_read_this_far_and_you_still_want_to_use_realloc.2C_what_not_to_do"></a><h2> <span class="mw-headline"> You've read this far and you still want to use realloc, what not to do </span></h2>
+<p>1. Do not realloc your buffer by 1 byte at a time.
+</p><p>A typical beginners mistake is to start with an empty buffer then
+increase the buffer by 1 as each char is read.
+This is guaranteed to churn your memory heap (with allocators that
+use such) malloc and friends are usually fairly expensive operations.
+Some typical strategies are to grow the buffer by a power of 2 each time,
+this is really up to you on how your data will grow.
+</p><p>2. Be very careful about the return value from realloc.
+</p><p>Whatever you do, do not automatically assume your new allocation exists,
+realloc can fail like malloc.
+</p><p><br>
+</p>
+<pre>       char    *p;
+       ...
+       p = realloc(p, new_size);
+       ...
+</pre>
+<p><br>
+What happens if realloc fails and you now have lost your original buffer
+pointer?
+</p><p>3. Using realloc to return memory to the system.
+</p><p>There are experienced programmers who will allocate much more memory than
+they need, then use realloc to reduce the size of the allocation rather
+than increase it. Be careful with this. It does make assumptions about
+how your malloc package works, it certainly would not work with a block
+(slab) allocator. Be aware of the malloc pointer overhead, you may not
+really return very much to the system at all. e.g.
+</p>
+<pre>       #define LARGEBUF        1024
+       char *buf;
+       buf = malloc(LARGEBUF);
+       ...
+       newbuf = realloc(buf, LARGEBUF-10);
+</pre>
+<p>If your buffer really only has 10 bytes it can trim down,
+your malloc package may not even bother reusing this.
+</p><p><br>
+--<a href="http://www.iso-9899.info/wiki?title=User:Dianora&amp;action=edit" class="new" title="User:Dianora">Dianora</a> 15:08, 22 February 2009 (UTC)
+</p>
+<!-- Saved in parser cache with key wikidb:pcache:idhash:1600-0!1!0!!en!2!edit=0 and timestamp 20171002195840 -->
+<div class="printfooter">
+Retrieved from "<a href="http://www.iso-9899.info/wiki/Why_not_realloc">http://www.iso-9899.info/wiki/Why_not_realloc</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="http://www.iso-9899.info/wiki/Why_not_realloc" title="View the content page [alt-c]" accesskey="c">Article</a></li>
+					 <li id="ca-talk" class="new"><a href="http://www.iso-9899.info/wiki?title=Talk:Why_not_realloc&amp;action=edit" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></li>
+					 <li id="ca-viewsource"><a href="http://www.iso-9899.info/wiki?title=Why_not_realloc&amp;action=edit" title="This page is protected. You can view its source. [alt-e]" accesskey="e">View source</a></li>
+					 <li id="ca-history"><a href="http://www.iso-9899.info/wiki?title=Why_not_realloc&amp;action=history" title="Past versions of this page. [alt-h]" accesskey="h">History</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://www.iso-9899.info/wiki?title=Special:Userlogin&amp;returnto=Why_not_realloc" title="You are encouraged to log in, it is not mandatory however. [alt-o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki.png);" href="http://www.iso-9899.info/wiki/Main_Page" title="Visit the Main Page [alt-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class="portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="http://www.iso-9899.info/wiki/Main_Page" title="Visit the Main Page [alt-z]" accesskey="z">Main Page</a></li>
+				<li id="n-portal"><a href="http://www.iso-9899.info/wiki/C:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://www.iso-9899.info/wiki/Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://www.iso-9899.info/wiki/Special:Recentchanges" title="The list of recent changes in the wiki. [alt-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://www.iso-9899.info/wiki/Special:Random" title="Load a random page [alt-x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="http://www.iso-9899.info/wiki/Help:Contents" title="The place to find out.">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" title="Search C [alt-f]" accesskey="f" type="text">
+				<input name="go" class="searchButton" id="searchGoButton" value="Go" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Search" type="submit">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://www.iso-9899.info/wiki/Special:Whatlinkshere/Why_not_realloc" title="List of all wiki pages that link here [alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://www.iso-9899.info/wiki/Special:Recentchangeslinked/Why_not_realloc" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://www.iso-9899.info/wiki/Special:Specialpages" title="List of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://www.iso-9899.info/wiki?title=Why_not_realloc&amp;printable=yes" title="Printable version of this page [alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://www.iso-9899.info/wiki?title=Why_not_realloc&amp;oldid=8537" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="Why%20not%20realloc%20-%20C_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 20:23, 30 December 2009.</li>
+				<li id="viewcount">This page has been accessed 15,836 times.</li>
+				<li id="privacy"><a href="http://www.iso-9899.info/wiki/C:Privacy_policy" title="C:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="http://www.iso-9899.info/wiki/C:About" title="C:About">About C</a></li>
+				<li id="disclaimer"><a href="http://www.iso-9899.info/wiki/C:General_disclaimer" title="C:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served in 0.098 secs. -->
+</body></html>

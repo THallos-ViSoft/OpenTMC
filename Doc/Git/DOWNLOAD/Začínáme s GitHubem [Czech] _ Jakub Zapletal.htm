@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="js" lang="en-US"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+																		
+		<title>Začínáme s GitHubem [Czech] | Jakub Zapletal</title>
+				
+				 
+		<script async="" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/a_004.htm"></script><script src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/cbgapi.loaded_1" async=""></script><script src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/cbgapi.loaded_0" async=""></script><script type="text/javascript" async="" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/plusone.js" gapi_processed="true"></script><script id="facebook-jssdk" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/sdk.js"></script><script id="twitter-wjs" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/widgets.js"></script><script async="" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/analytics.js"></script><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+<link rel="alternate" type="application/rss+xml" title="Jakub Zapletal » Feed" href="http://jakubzapletal.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Jakub Zapletal » Comments Feed" href="http://jakubzapletal.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Jakub Zapletal » Začínáme s GitHubem [Czech] Comments Feed" href="http://jakubzapletal.com/zaciname-s-githubem/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/jakubzapletal.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.16"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/wp-emoji-release.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="crayon-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/crayon.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-github-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/github.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monospace-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/monospace.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/jetpack.css" type="text/css" media="all">
+<link rel="stylesheet" id="lingonberry_googleFonts-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="lingonberry_style-css" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/style.css" type="text/css" media="all">
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.2 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-39676661-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/jquery.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/jquery-migrate.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.7.1","is_admin":"0","ajaxurl":"http:\/\/jakubzapletal.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/crayon.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://jakubzapletal.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://jakubzapletal.com/wp-includes/wlwmanifest.xml"> 
+<link rel="next" title="BDD – stop writing tests, let’s describe your app [Czech]" href="http://jakubzapletal.com/bdd-stop-writing-tests-lets-describe-your-app-czech/">
+<meta name="generator" content="WordPress 4.2.16">
+<link rel="canonical" href="http://jakubzapletal.com/zaciname-s-githubem/">
+<link rel="shortlink" href="http://jakubzapletal.com/?p=5">
+
+<link rel="dns-prefetch" href="http://i0.wp.com/">
+<link rel="dns-prefetch" href="http://i1.wp.com/">
+<link rel="dns-prefetch" href="http://i2.wp.com/">
+<style type="text/css">img#wpstats{display:none}</style>      
+	      <!-- Customizer CSS --> 
+	      
+	      <style type="text/css">
+	           body a { color:#ff7e00; }	           body a:hover { color:#ff7e00; }	           .header { background:#ff7e00; }	           .post-bubbles a:hover { background-color:#ff7e00; }	           .mejs-horizontal-volume-current { background-color:#ff7e00; }	           .post-nav a:hover { background-color:#ff7e00; }	           .comment-meta-content cite a:hover { color:#ff7e00; }	           .comment-meta-content p a:hover { color:#ff7e00; }	           .comment-actions a:hover { background-color:#ff7e00; }	           .widget-content .textwidget a:hover { color:#ff7e00; }	           .widget_archive li a:hover { color:#ff7e00; }	           .widget_categories li a:hover { color:#ff7e00; }	           .widget_meta li a:hover { color:#ff7e00; }	           .widget_nav_menu li a:hover { color:#ff7e00; }	           .widget_rss .widget-content ul a.rsswidget:hover { color:#ff7e00; }	           #wp-calendar thead { color:#ff7e00; }	           .widget_tag_cloud a:hover { background:#ff7e00; }	           .search-button:hover .genericon { color:#ff7e00; }	           .flexslider:hover .flex-next:active { color:#ff7e00; }	           .flexslider:hover .flex-prev:active { color:#ff7e00; }	           .post-title a:hover { color:#ff7e00; }	           .post-content a { color:#ff7e00; }	           .post-content a:hover { color:#ff7e00; }	           .post-content a:hover { border-bottom-color:#ff7e00; }	           .post-content fieldset legend { background:#ff7e00; }	           .post-content input[type="submit"]:hover { background:#ff7e00; }	           .post-content input[type="button"]:hover { background:#ff7e00; }	           .post-content input[type="reset"]:hover { background:#ff7e00; }	           .comment-header h4 a:hover { color:#ff7e00; }	           .form-submit #submit:hover { background-color:#ff7e00; }	           
+	      </style> 
+	      
+	      <!--/Customizer CSS-->
+	      
+      
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Začínáme s GitHubem [Czech]">
+<meta property="og:url" content="http://jakubzapletal.com/zaciname-s-githubem/">
+<meta property="og:description" content="Jak název článku napovídá, budeme se věnovat práci s GitHubem ( ale velká část bude pojednávat o práci s Gitem jako takovým. Pokud vám zde budou chybět některé informace okolo Gitu, tak doporučuji ...">
+<meta property="article:published_time" content="2013-04-09T15:52:16+00:00">
+<meta property="article:modified_time" content="2015-05-04T00:47:13+00:00">
+<meta property="article:author" content="http://jakubzapletal.com/author/jakubzapletal/">
+<meta property="og:site_name" content="Jakub Zapletal">
+<meta property="og:image" content="http://jakubzapletal.com/wp-content/uploads/2013/04/github_new_repo.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:image" content="http://jakubzapletal.com/wp-content/uploads/2013/04/github_new_repo.png?w=240">
+<meta name="twitter:card" content="summary">
+	
+	<script type="text/javascript" async="" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/embed.js"></script><script async="" type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/count_002.js"></script><link rel="prefetch" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/a_data_002/lounge.css"><link rel="prefetch" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/a_data_002/common.js"><link rel="prefetch" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/a_data_002/lounge_002.js"><link rel="prefetch" href="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/a_data_002/config.js"><script src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/count-data.js"></script></head>
+	
+	<body class="single single-post postid-5 single-format-standard">
+	
+		<div class="navigation">
+				
+			<div class="navigation-inner section-inner">
+		
+				<ul class="blog-menu">
+				
+										
+				 </ul>
+				 
+				 <form method="get" class="search-form" action="http://jakubzapletal.com/">
+	<input value="Type and press enter" onfocus="if(this.value=='Type and press enter')this.value='';" onblur="if(this.value=='')this.value='Type and press enter';" name="s" id="s" type="search"> 
+	<input id="searchsubmit" value="Search" class="button hidden" type="submit">
+</form>				 
+				 <div class="clear"></div>
+			 
+			</div> <!-- /navigation-inner -->
+		 
+		</div> <!-- /navigation -->
+	
+		<div class="header section">
+				
+			<div class="header-inner section-inner">
+			
+											
+					<a href="http://jakubzapletal.com/" title="Jakub Zapletal  | Blog" rel="home" class="logo">
+						<img src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/cropped-339ba421.jpg" alt="Jakub Zapletal">
+					</a>
+					
+							        				
+				<h1 class="blog-title">
+					<a href="http://jakubzapletal.com/" title="Jakub Zapletal — Blog" rel="home">Jakub Zapletal</a>
+				</h1>
+				
+				<div class="nav-toggle">
+				
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					
+					<div class="clear"></div>
+				
+				</div>
+				 				
+				 <div class="clear"></div>
+																							
+			</div> <!-- /header section -->
+			
+		</div> <!-- /header-inner section-inner -->
+<div class="content section-inner">
+											        
+		
+		<div class="posts">
+	
+			<div id="post-5" class="post-5 post type-post status-publish format-standard hentry category-for-beginners tag-bitbucket tag-branch tag-git tag-github tag-linux tag-master tag-repository tag-ssh tag-windows">
+
+				<div class="post-bubbles">
+
+	<a href="http://jakubzapletal.com/zaciname-s-githubem/" class="format-bubble" title="Začínáme s GitHubem [Czech]"></a>
+		
+	
+</div>
+
+<div class="content-inner">
+
+	<div class="post-header">
+	
+				
+	    <h2 class="post-title"><a href="http://jakubzapletal.com/zaciname-s-githubem/" rel="bookmark" title="Začínáme s GitHubem [Czech]">Začínáme s GitHubem [Czech]</a></h2>
+	    
+		<div class="post-meta">
+		
+			<span class="post-date"><a href="http://jakubzapletal.com/zaciname-s-githubem/" title="15:52">April 9, 2013</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://jakubzapletal.com/author/jakubzapletal/" title="Posts by Jakub Zapletal" rel="author">Jakub Zapletal</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<a href="http://jakubzapletal.com/zaciname-s-githubem/#disqus_thread" data-disqus-identifier="5 http://jakubzapletal.com/?p=5">1 Comment</a>			
+						
+												
+		</div> <!-- /post-meta -->
+	    
+    </div> <!-- /post-header -->
+										                                    	    
+    <div class="post-content">
+    	    		            			            	                                 
+                                                           
+		<p>Jak název článku napovídá, budeme se věnovat práci s GitHubem (<a href="https://github.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://github.com/', 'https://github.com/');" target="_blank">https://github.com/</a>),
+ ale velká část bude pojednávat o práci s Gitem jako takovým. Pokud vám 
+zde budou chybět některé informace okolo Gitu, tak doporučuji český 
+překlad knihy, která je zdarma (<a href="http://git-scm.com/book/cs" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://git-scm.com/book/cs', 'http://git-scm.com/book/cs');" target="_blank">http://git-scm.com/book/cs</a>), případně ohledně GitHubu jejich oficiální help (<a href="https://help.github.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://help.github.com/', 'https://help.github.com/');" target="_blank">https://help.github.com/</a>).</p>
+<p><span id="more-5"></span></p>
+<h2>Co je Git</h2>
+<p>Git je verzovací systém původně navržený pro správu verzi operačního 
+systému Linux a nyní je nejrozšířenějším verzovacím systémem nejen u 
+vývojářů webových aplikací. Díky tomu, že byl navržen pro OS Linux, tak 
+také pod tímto OS má nejlepší podporu. Uživatelé Windows a XAMPPu se 
+nemusejí bát, i pro ně existuje způsob, jak s ním mohou pracovat, aniž 
+by měli nainstalovaný Linux.</p>
+<h2>Proč verzovat</h2>
+<p>Využívat verzovací systém, případně Git, není jen moderním hitem a 
+být “IN”, ale opravdu vám to zkvalitní práci a můžete tak předejít 
+spoustě problémům se ztrátou dat nebo jejich přepsáním. Využívání 
+verzovacího systému je při práci v týmu vývojářů snad nutností, ale i 
+jako samostatný vývojář naleznete výhody.</p>
+<h4>Práce v týmu</h4>
+<p>Zkoušeli jste někdy pracovat v týmu a nahrávat soubory na jedno místo
+ například pomocí FTP? Já před X lety ano, a věřte, že je to peklo. 
+Každou chvíli řešíte problém s přepsáním nechtěných souborů, většinou 
+nelze dohledat, kdo problém zavinil,&nbsp; a na možnost získání starší 
+verze nějakého souboru, nebo dokonce celé aplikace, můžete zapomenout. 
+Umožňuje vám to krásně rozdělovat funkční verzi aplikace od upravované 
+verze, nedodělané verze, nebo si jen tak můžete vyzkoušet nějakou změnu a
+ pak to zahodit.</p>
+<h4>Práce samostatného vývojáře</h4>
+<p>Pokud se zamyslíte nad výhodami práce v týmu, tak je můžete uplatnit i
+ když pracujete sám, s tím rozdílem, že víte, kdo problém zavinil :-). 
+Mimo to se často setkávám se situací, kdy pracuji na projektu z více 
+míst (kancelář, doma) a potřebuji si hotovou práci přenášet z jednoho 
+místa na druhé. V tomto vám verzovací systém také lehce pomůže, stačí 
+jen odeslat vaši rozdělanou práci a v dalším místě si aktualizujete 
+soubory – vše otázkou pár vteřin. Neocenitelnou výhodou je hlavně 
+zálohování dat. Když přijdete o vaše data (poškodí se vám HDD), tak vše 
+máte stále uložena na GitHubu.</p>
+<h2>Co je GitHub</h2>
+<p>GitHub je online služba, která vám umožní si vaše data v Gitu ukládat
+ na online&nbsp;server. Máte je tak k dispozici všude, kde je přístupný 
+internet. Mimo to máte kompletní správu vašich repozitářů (viz níže) a 
+vašeho účtu přes webové rozhraní. Nabízí jak placený přístup, tak 
+zdarma. Pokud chcete mít repozitáře skryté před veřejností, tak si 
+musíte za balík potřebných repozitářů připlatit. Pokud vám nevadí, že si
+ vaše kódy někdy může vyhledat a případně stáhnout, tak to máte zdarma. 
+Existují projekty podobné GitHubu, ale zatím nedosahují jeho kvalit, 
+jako příklad mohu uvést Bitbucket (<a href="https://bitbucket.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://bitbucket.org/', 'https://bitbucket.org/');" target="_blank">https://bitbucket.org/</a>).</p>
+<h2>Slovník pojmů</h2>
+<p>Nelze zde vypsat přehled všech pojmů, to by bylo na samostatný 
+článek, a tak zde uvedu jen ty podstatné pro tento článek a ostatní si 
+můžete dohledat zde:&nbsp;<a href="http://www.fuzzy.cz/cs/clanky/git-kapitola-11-git-slovnicek/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fuzzy.cz/cs/clanky/git-kapitola-11-git-slovnicek/', 'http://www.fuzzy.cz/cs/clanky/git-kapitola-11-git-slovnicek/');" target="_blank">http://www.fuzzy.cz/cs/clanky/git-kapitola-11-git-slovnicek/</a></p>
+<p><strong>repozitář (repository)</strong> – Zaštiťuje celý 1 projekt, včetně všech souborů, verzí souborů, větví, úkolů a přístupů.</p>
+<p><strong>větev (branch)</strong> – Je to vývojová linie vašeho 
+projektu. Paralelně jich povětšinou existuje více. Například si to 
+představte tak, že 1 větev je verze vašeho systému, která je plně 
+funkční a nasazena v ostrém provozu, a ve druhé větvi implementujete 
+nové funkce, nebo opravy. Jakmile je práce na dané větvi dokončena, 
+obvykle ji pak sloučíte s vaší hlavní (master) větví.</p>
+<p><strong>hlavní (master) větev</strong> – Takto označovaná větev 
+obvykle obsahuje vaši produkční verzi projektu, kterou aktuálně 
+používáte v ostrém provozu. Ve většině případů je právě tato větev 
+výchozí větví pro vytváření nových větví.</p>
+<p><strong>commit</strong> – Uložení provedených úprav a vytvoření 
+skupiny změn na daných souborech. Každé toto uložení vyžaduje váš 
+komentář, například označení co se změnilo.</p>
+<p><strong>push</strong> – Odeslání všech posledních provedených commitů na server (GitHub).</p>
+<p><strong>pull</strong> – Aktualizace vašich lokálních souborů ze 
+serveru (GitHub). Vždy to aktualizuje pouze tu větev, pro kterou chcete 
+aktualizaci provést.</p>
+<p><strong>merge</strong> – Sloučení obsahu větví.</p>
+<h2>Instalace Gitu</h2>
+<p>Pro Linux i Windows viz <a href="http://git-scm.com/book/cs/%C3%9Avod-Instalace-syst%C3%A9mu-Git" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://git-scm.com/book/cs/%C3%9Avod-Instalace-syst%C3%A9mu-Git', 'http://git-scm.com/book/cs/%C3%9Avod-Instalace-syst%C3%A9mu-Git');" target="_blank">http://git-scm.com/book/cs/%C3%9Avod-Instalace-syst%C3%A9mu-Git</a>.</p>
+<p>Dále je potřeba provést nastavení vaší identity apod., viz <a href="http://git-scm.com/book/cs/%C3%9Avod-Prvn%C3%AD-nastaven%C3%AD-syst%C3%A9mu-Git" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://git-scm.com/book/cs/%C3%9Avod-Prvn%C3%AD-nastaven%C3%AD-syst%C3%A9mu-Git', 'http://git-scm.com/book/cs/%C3%9Avod-Prvn%C3%AD-nastaven%C3%AD-syst%C3%A9mu-Git');" target="_blank">http://git-scm.com/book/cs/%C3%9Avod-Prvn%C3%AD-nastaven%C3%AD-syst%C3%A9mu-Git</a>.</p>
+<p>GitHub nyní nově nabízí vlastní desktopovou aplikaci pro uživatele 
+Windows. Vzhled aplikace se drží grafické konvence Windows 8. Kromě 
+grafického rozhraní nabízí také klasický přístup přes command line. 
+Pokud se rozhodnete využívat tuto aplikaci, následující kapitoly článku 
+berte jako informativní pro upřesnění problematiky. Většinu níže uvedené
+ práce provedete v aplikaci pouhým klikáním.<br>
+Ke stažení zde: <a href="http://windows.github.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://windows.github.com/', 'http://windows.github.com/');" target="_blank">http://windows.github.com/</a></p>
+<h2>Vytvoření repozitáře</h2>
+<p>Před vytvořením repozitáře je nutné se registrovat na GitHubu, pokud jste to ještě neprovedli, tak učiňte tak nyní (<a href="https://github.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://github.com/', 'https://github.com/');" target="_blank">https://github.com/</a>).</p>
+<h4>Nový repozitář</h4>
+<p>Pokud jste nyní přihlášeni, tak nahoře vedle svého loginu je hned první ikona pro možnost vytvoření nového repozitáře.</p>
+<p><img class="aligncenter wp-image-12 size-full" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/github_new_repo.png" alt="github_new_repo" width="239" height="48"></p>
+<p>Jako “Owner” vyberte svůj účet (měl by být automaticky vybrán).</p>
+<p>Do “Repository name” napište název vašeho repozitáře. Jak vám GitHub 
+radí, je vhodné používat krátké a výstižné názvy repozitářů.</p>
+<p>Máte také možnosti si vyplnit kratší popis repozitáře do políčka “Description”.</p>
+<p>Další důležitým nastavením je, zda daný repozitář chcete “Public” nebo “Private” (pouze pro placené účty).</p>
+<p>Pokud zatrhnete “Initialize this repository with a README”, vytvoří 
+se vám v novém repozitáři automaticky soubor README.md. Díky tomu, že 
+repozitář bude obsahovat již nějaký soubor, bude možné s repozitářem 
+plně pracovat, v opačném případě si tam musíme první soubory nahrát 
+ručně sami (viz postup popsán níže).</p>
+<p>Volba “.gitignore” vám zajistí, že určité soubory/složky nebudou 
+Gitem verzovány, tedy nebudou se Gitem odesílat na server, ani se ze 
+serveru nebudou aktualizovat. Pokud zatím nemáte představu, zda něco 
+vybrat, případně co vybrat, tak danou možnost přeskočte.</p>
+<p>Dáme “Create repository” a máme vytvořený repozitář.</p>
+<h4>SSH klíč</h4>
+<p>GitHub a i jiné servery pro sdílení Git repozitářů vyžadují kvůli 
+zabezpečení, abyste s nimi komunikovali za pomocí ověřeného SSH klíče. 
+Tento klíč funguje jako vaše identifikace k vašemu účtu. Když pak budete
+ chtít pracovat se soubory ve vašem repozitáři, tak díky tomuto klíče si
+ GitHub zjišťuje, že jste to doopravdy vy a nevydává se za vás někdo 
+jiný. Návod naleznete přímo na stránkách GitHubu (<a href="https://help.github.com/articles/generating-ssh-keys" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://help.github.com/articles/generating-ssh-keys', 'https://help.github.com/articles/generating-ssh-keys');" target="_blank">https://help.github.com/articles/generating-ssh-keys</a>).</p>
+<p><em>Pozn.: Pokud používáte Windows aplikaci od GitHubu, SSH klíč 
+nastavovat nepotřebujete, aplikace si jej vytvoří a nastaví automaticky 
+sama.</em></p>
+<h2>Práce s repozitářem</h2>
+<h4>Odeslání prvních souborů do repozitáře</h4>
+<p>Spustíme/otevřeme si command line (příkazovou řádku) a pomocí 
+procházení adresářovou strukturou se dostaneme do adresáře, v kterém 
+chceme mít požadovaný projekt. V adresáři si vytvoříme textový soubor s 
+název README.md a do něj si napíšeme například “Můj první repozitář”.</p>
+<p>Vytvoříme z adresáře pracovní složku pro Git:<br>
+
+			<span id="crayon-59d3689206d20850970334" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">init</span></span></span></p>
+<p>Řekneme Gitu, aby zaznamenal nové/změněné soubory:<br>
+
+			<span id="crayon-59d3689206d2d165031200" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">add</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">A</span></span></span></p>
+<p>Vytvoříme skupinu změn:<br>
+
+			<span id="crayon-59d3689206d31831022084" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">commit</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">m</span><span class="crayon-h"> </span><span class="crayon-s">"first commit"</span></span></span></p>
+<p>Nastavíme repozitář na GitHubu jako náš výchozí:<br>
+
+			<span id="crayon-59d3689206d34176443257" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">remote </span><span class="crayon-e">add </span><span class="crayon-e">origin </span><span class="crayon-v">git</span><span class="crayon-sy">@</span><span class="crayon-v">github</span><span class="crayon-e">.com</span><span class="crayon-o">:</span><span class="crayon-v">login_uzivatele</span><span class="crayon-o">/</span><span class="crayon-v">nazev_repozitare</span><span class="crayon-e">.git</span></span></span></p>
+<p>Odešleme všechny commity na GitHub:<br>
+
+			<span id="crayon-59d3689206d37237806894" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">push </span><span class="crayon-e">origin </span><span class="crayon-v">master</span></span></span><br>
+<em>– “origin” jsme si výše definovali jako náš výchozí server a 
+repozitář, “master” je název větve, který si git automaticky vytváří 
+jako defaultní</em></p>
+<p>Nyní, když se podíváte na GitHubu na svůj repozitář, tak vidíte 
+odeslané soubory. Pokud je součástí vašich souborů README.md, tak jeho 
+obsah vidíte pod výpisem souborů.</p>
+<h4>Stažení již existujícího repozitáře</h4>
+<p>Pomocí procházení adresářovou strukturou se dostaneme do adresáře, v 
+kterém chceme mít umístěnou složku s požadovaným projektem. Složku 
+můžete, ale nemusíte předem vytvářet.</p>
+<p>Stažení existujícího repozitáře:<br>
+
+			<span id="crayon-59d3689206d3a099534569" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-r">clone</span><span class="crayon-h"> </span><span class="crayon-v">git</span><span class="crayon-sy">@</span><span class="crayon-v">github</span><span class="crayon-e">.com</span><span class="crayon-o">:</span><span class="crayon-v">login_uzivatele</span><span class="crayon-o">/</span><span class="crayon-v">nazev_repozitare</span><span class="crayon-e">.git</span><span class="crayon-h"> </span><span class="crayon-v">nazev_slozky</span></span></span><br>
+<em>– </em><em>cestu upravte dle cesty k repozitáři na GitHubu, 
+“nazev_slozky” přejmenujte dle toho, jak chcete mít/máte pojmenovaný 
+adresář, kde bude umístěn projekt</em></p>
+<h4>Vytváření větví</h4>
+<p>Seznam větví zjistíte zadáním: 
+			<span id="crayon-59d3689206d3d325050534" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">branch</span></span></span> , kde právě aktuální větev je označena symbolem hvězdičky (*).</p>
+<p>Pokud chcete vytvořit novou větev, tak počítejte s tím, že nová větev
+ bude obsahovat přesně takový stav projektu/souborů jako větev, ze které
+ ji vytváříte. Jste-li tedy aktuálně na “master”, tak nová větev bude 
+obsahovat to samé co “master”. Pro vytvoření větve zadejte:<br>
+
+			<span id="crayon-59d3689206d40090079477" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">checkout</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">b</span><span class="crayon-h"> </span><span class="crayon-v">nazev_vetve</span></span></span><br>
+<em>– to nám vytvoří novou větev a zároveň nám ji označí jako aktuální, na které zrovna pracujeme.</em></p>
+<p>Pokud nyní znovu zadáte 
+			<span id="crayon-59d3689206d44032416622" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">branch</span></span></span> , tak uvidíte 2 větve, “master” a nově vytvořenou, kde u nově vytvořené bude symbol *.</p>
+<p>Jakmile nyní provedeme příkaz 
+			<span id="crayon-59d3689206d46275143673" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">push </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve</span></span></span>
+ , tak se nám na GitHubu vytvoří tato větev a objeví se tam všechny 
+provedené úpravy. Na GitHubu se můžete přesouvat mezi všemi vytvořenými 
+větvemi, které jste tam odeslali a sledovat změny v souborech.</p>
+<h4>Přepnutí větve</h4>
+<p>Pokud se chceme přepnout na jinou větev, stačí zadat 
+			<span id="crayon-59d3689206d49064342716" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">checkout </span><span class="crayon-v">nazev_vetve</span></span></span>
+ . Pozor, pokud jste v původní větvi upravili nějaké soubory, u kterých 
+jste neprovedli operaci commit, tak změny v souborech se neprojeví v 
+původní větvi, ale přenesou se zároveň s vámi do přepnuté větve.</p>
+<h4>Sloučení větví</h4>
+<p>Pokud máme v nějaké větvi změny a chceme, aby se změny zanesli do aktuální větve, zvolíme příkaz:<br>
+
+			<span id="crayon-59d3689206d4c084071436" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">merge </span><span class="crayon-v">nazev_jine_vetve</span></span></span></p>
+<p>Nemusíme se bát nežádoucímu přepsání souborů. Git merguje 
+inteligentně a pokud si náhodou neví s něčím rady, tak vám o tom dá 
+vědět a vyžádá, abyste se sloučení provedli ručně, viz hláška:</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+		<div id="crayon-59d3689206d4f662872270" class="crayon-syntax crayon-theme-github crayon-font-monospace crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-mouseover wrap" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px ! important; line-height: 15px ! important; z-index: 0; opacity: 0; overflow: hidden;">Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59d3689206d4f662872270-1" style="height: 15px;">1</div><div class="crayon-num" data-line="crayon-59d3689206d4f662872270-2" style="height: 15px;">2</div><div class="crayon-num" data-line="crayon-59d3689206d4f662872270-3" style="height: 15px;">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59d3689206d4f662872270-1"><span class="crayon-v">Auto</span><span class="crayon-o">-</span><span class="crayon-e">merging </span><span class="crayon-v">README</span><span class="crayon-e">.md</span></div><div class="crayon-line" id="crayon-59d3689206d4f662872270-2"><span class="crayon-e">CONFLICT</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">content</span><span class="crayon-sy">)</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Merge </span><span class="crayon-e">conflict </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-v">README</span><span class="crayon-e">.md</span></div><div class="crayon-line" id="crayon-59d3689206d4f662872270-3"><span class="crayon-e">Automatic </span><span class="crayon-e">merge </span><span class="crayon-v">failed</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-e">fix </span><span class="crayon-e">conflicts </span><span class="crayon-st">and</span><span class="crayon-h"> </span><span class="crayon-st">then</span><span class="crayon-h"> </span><span class="crayon-e">commit </span><span class="crayon-e">the </span><span class="crayon-v">result</span><span class="crayon-sy">.</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0008 seconds] -->
+<p>Git vám přímo řekne, v kterých souborech se objevil konflikt a co 
+máte udělat, tedy vyřešit konflikt v souboru a pak commitnout změnu. 
+Pokud při mergování mělo dojít ke sloučení více souborů, tak ostatní 
+soubory, u kterých nenastal konflikt, byly bez problému mergnuty a nyní 
+jen stačí vyřešit soubory, v kterých konflikt nastal. Seznam souborů, 
+které nebyly v pořádku mergnuty, můžete zobrazit příkazem:<br>
+
+			<span id="crayon-59d3689206d52510625285" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">status</span></span></span></p>
+<p>Pokud si nyní otevřeme soubor README.md, tak Git nám tam označil konflikt takto:</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+		<div id="crayon-59d3689206d55052101106" class="crayon-syntax crayon-theme-github crayon-font-monospace crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-mouseover wrap" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">README.md</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px ! important; line-height: 15px ! important; z-index: 0; opacity: 0; overflow: hidden;">Můj první repozitář
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+CCC
+=======
+AAA
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59d3689206d55052101106-1" style="height: 15px;">1</div><div class="crayon-num" data-line="crayon-59d3689206d55052101106-2" style="height: 15px;">2</div><div class="crayon-num" data-line="crayon-59d3689206d55052101106-3" style="height: 15px;">3</div><div class="crayon-num" data-line="crayon-59d3689206d55052101106-4" style="height: 15px;">4</div><div class="crayon-num" data-line="crayon-59d3689206d55052101106-5" style="height: 15px;">5</div><div class="crayon-num" data-line="crayon-59d3689206d55052101106-6" style="height: 15px;">6</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59d3689206d55052101106-1">Můj první repozitář</div><div class="crayon-line" id="crayon-59d3689206d55052101106-2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div><div class="crayon-line" id="crayon-59d3689206d55052101106-3">CCC</div><div class="crayon-line" id="crayon-59d3689206d55052101106-4">=======</div><div class="crayon-line" id="crayon-59d3689206d55052101106-5">AAA</div><div class="crayon-line" id="crayon-59d3689206d55052101106-6">&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>To co je obaleno mezi&nbsp;
+			<span id="crayon-59d3689206d58960144858" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-o">&lt;&lt;&lt;</span><span class="crayon-o">&lt;&lt;&lt;</span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-r">HEAD</span></span></span> a&nbsp;
+			<span id="crayon-59d3689206d5b648807694" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-o">===</span><span class="crayon-o">===</span><span class="crayon-o">=</span></span></span> označuje změny, které máte ve vaší aktuální větvi, a to co je obaleno mezi 
+			<span id="crayon-59d3689206d5d148685410" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-o">===</span><span class="crayon-o">===</span><span class="crayon-o">=</span></span></span> a 
+			<span id="crayon-59d3689206d60797970880" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">master</span></span></span> označuje změny, které jsem se pokusil mergnout z větve “master”.</p>
+<p>Předpokládejme, že požadujeme úpravu v naší aktuální větvi za tu správnou. Upravíme soubor tak, aby vypadal správně takto:</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+		<div id="crayon-59d3689206d63835049420" class="crayon-syntax crayon-theme-github crayon-font-monospace crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-mouseover wrap" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">README.md</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px ! important; line-height: 15px ! important; z-index: 0; opacity: 0; overflow: hidden;">Můj první repozitář
+CCC</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59d3689206d63835049420-1" style="height: 15px;">1</div><div class="crayon-num" data-line="crayon-59d3689206d63835049420-2" style="height: 15px;">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59d3689206d63835049420-1">Můj první repozitář</div><div class="crayon-line" id="crayon-59d3689206d63835049420-2">CCC</div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>Nyní už jen stačí spustit příkazy:</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+		<div id="crayon-59d3689206d66637884503" class="crayon-syntax crayon-theme-github crayon-font-monospace crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-mouseover wrap" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px ! important; line-height: 15px ! important; z-index: 0; opacity: 0; overflow: hidden;">git add -A
+git commit -m "text informujici o oprave"</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59d3689206d66637884503-1" style="height: 15px;">1</div><div class="crayon-num" data-line="crayon-59d3689206d66637884503-2" style="height: 15px;">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59d3689206d66637884503-1"><span class="crayon-e">git </span><span class="crayon-v">add</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">A</span></div><div class="crayon-line" id="crayon-59d3689206d66637884503-2"><span class="crayon-e">git </span><span class="crayon-v">commit</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">m</span><span class="crayon-h"> </span><span class="crayon-s">"text informujici o oprave"</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p><em>Pozn.: Pokud máte v konfliktu více souborů, doporučuji místo 
+			<span id="crayon-59d3689206d68262842952" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">add</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">A</span></span></span> použít po každém ručně upraveném souboru příkaz 
+			<span id="crayon-59d3689206d6b246913502" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">add </span><span class="crayon-v">nazev_souboru</span></span></span> . Tímto způsobem budete moct průběžně příkazem 
+			<span id="crayon-59d3689206d6e582549482" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">status</span></span></span> sledovat, které soubory ještě musíte upravit. V případě nechtěného použití 
+			<span id="crayon-59d3689206d71199606478" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">add</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">A</span></span></span> se všechny soubory označí, aniž byste je upravili a již pomocí</em> 
+			<span id="crayon-59d3689206d73527522262" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">status</span></span></span> <em>nezjistíte, které soubory je potřeba upravit kvůli konfliktu.</em></p>
+<h4>Aktualizace větve z GitHubu</h4>
+<p>Pokud si chceme aktualizovat větev obsahem, který je na GitHubu 
+(někdo jiný provedl nějaké úpravy, nebo si jen přenášíme mezi více PC 
+rozdělanou práci), tak si nejdříve pomocí 
+			<span id="crayon-59d3689206d76724882904" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">branch</span></span></span> zkontrolujeme, že jsme ve správné větvi, a poté jen stačí příkaz:<br>
+
+			<span id="crayon-59d3689206d79613647754" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">pull </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve</span></span></span></p>
+<p>Při pullování větve platí stejná pravidla jako při mergování a jeho konfliktech.</p>
+<h4>Stažení větve z GitHubu, která na lokálním PC ještě neexistuje</h4>
+<p>Pokud máte již u sebe nastavený repozitář, ale na GitHubu existuje 
+větev, kterou u sebe lokálně nemáte vytvořenou, tak si ji potřebujeme 
+vytvořit a stáhnout. Šlo by to samozřejmě provést pomocí příkazů, které 
+jsme výše již použili, ale mohlo byt dojít k chybám a k tomuto účelu je 
+vhodnější použít následující příkaz:<br>
+
+			<span id="crayon-59d3689206d7c366325553" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">fetch </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve_na_githubu</span><span class="crayon-o">:</span><span class="crayon-v">nazev_vetve_na_lokalu</span></span></span></p>
+<p>Většinou doporučuji, aby oba názvy větví byly totožné. Pak už jen stačí se pomocí checkoutu přepnout na danou větev.</p>
+<h2>Vývojový cyklus</h2>
+<p>Cyklus práce pro vývojáře probíhá většinou stejným způsobem, jen 
+občas je potřeba udělat nějaké úkony navíc. Předpokládejme, že máme již 
+nastavený potřebný repozitář jak na GitHubu, tak na lokálním PC.</p>
+<h4>Nový úkol</h4>
+<ol>
+<li><strong>Byl mi přidělen nový úkol.</strong></li>
+<li><strong>Zkontroluji si, že jsem ve větvi “master”:</strong> <em>
+			<span id="crayon-59d3689206d7f222723543" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">branch</span></span></span> </em></li>
+<li><strong>Pokud jsem v jiné větvi, přepnu se na “master”:</strong> <em>
+			<span id="crayon-59d3689206d81262217606" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">checkout </span><span class="crayon-v">master</span></span></span></em><strong><br>
+</strong></li>
+<li><strong>Aktualizuji “master” pro případ, kdyby tam někdo provedl změny:<br>
+</strong><em>
+			<span id="crayon-59d3689206d84718899162" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">pull </span><span class="crayon-e">origin </span><span class="crayon-v">master</span></span></span>&nbsp;</em></li>
+<li><strong>Vytvořím novou větev: </strong><em>
+			<span id="crayon-59d3689206d87623766063" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">checkout</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">b</span><span class="crayon-h"> </span><span class="crayon-v">nova_vetev</span></span></span>&nbsp;<strong><br>
+</strong></em></li>
+<li><strong>Provedu změny v souborech.<br>
+</strong></li>
+<li><strong>Oznámím Gitu, že jsem něco změnil: </strong><em>
+			<span id="crayon-59d3689206d89139901091" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">add</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">A</span></span></span> <strong><br>
+</strong></em></li>
+<li><strong>Změny zabalím do skupiny změn: </strong><em>
+			<span id="crayon-59d3689206d8c697336282" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">commit</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">m</span><span class="crayon-h"> </span><span class="crayon-s">"zprava"</span></span></span>&nbsp;<strong><br>
+</strong></em></li>
+<li><strong>Odešlu změny na GitHub: </strong><em>
+			<span id="crayon-59d3689206d8f811889475" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">push </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve</span></span></span>&nbsp;</em></li>
+</ol>
+<h4>Pokračování na existujícím úkolu</h4>
+<ol>
+<li><strong>Byl mi přidělen již existující úkol.</strong></li>
+<li><strong>Zjistím, zda jsem na požadované větvi, či zda požadovaná větev u mě existuje:<br>
+</strong><em>
+			<span id="crayon-59d3689206d92028384019" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">branch</span></span></span>&nbsp;</em></li>
+<li><strong>Pokud větev na lokálním PC neexistuje, stáhnu si ji z GitHubu:<br>
+</strong> <em>
+			<span id="crayon-59d3689206d94449555876" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">fetch </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve</span><span class="crayon-o">:</span><span class="crayon-v">nazev_vetve</span></span></span>&nbsp;</em></li>
+<li><strong>Pokud jsem na jiné větvi, přepnu se na požadovanou větev:<br>
+</strong><em>
+			<span id="crayon-59d3689206d97729679209" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">checkout </span><span class="crayon-v">nazev_vetve</span></span></span>&nbsp; <strong><br>
+</strong></em></li>
+<li><strong>Pokud jsme neprováděli bod 3, aktualizuji si větev z GitHubu:</strong><br>
+<em>
+			<span id="crayon-59d3689206d9a737523504" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">pull </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve</span></span></span>&nbsp;</em></li>
+<li><strong>Provedu změny v souborech.<br>
+</strong></li>
+<li><strong>Oznámím Gitu, že jsem něco změnil: </strong><em>
+			<span id="crayon-59d3689206d9d221277129" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">add</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">A</span></span></span> <strong><br>
+</strong></em></li>
+<li><strong>Změny zabalím do skupiny změn: </strong><em>
+			<span id="crayon-59d3689206d9f714696543" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-v">commit</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">m</span><span class="crayon-h"> </span><span class="crayon-s">"zprava"</span></span></span>&nbsp;<strong><br>
+</strong></em></li>
+<li><strong>Odešlu změny na GitHub:&nbsp;</strong><em>
+			<span id="crayon-59d3689206da2039751624" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monospace" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><span class="crayon-e">git </span><span class="crayon-e">push </span><span class="crayon-e">origin </span><span class="crayon-v">nazev_vetve</span></span></span><br>
+</em></li>
+<li><strong>Případně body 5 – 9 opakuji.</strong></li>
+</ol>
+<h2>Závěr</h2>
+<p>Probrali jsme základní použití nástroje Git s využitím online serveru
+ pro ukládání dat GitHub. Celý článek je jen krátkým výběrem toho, co 
+lze v Gitu a v GitHubu provádět, a tak vás níže odkáži na odkazy, které s
+ v případě potřeby můžete prostudovat.</p>
+<h4>Odkazy</h4>
+<p><a href="http://git-scm.com/book/cs/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://git-scm.com/book/cs/', 'http://git-scm.com/book/cs/');" target="_blank">http://git-scm.com/book/cs/</a></p>
+<p><a href="http://www.fuzzy.cz/cs/projekty/git-uzivatelska-prirucka/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.fuzzy.cz/cs/projekty/git-uzivatelska-prirucka/', 'http://www.fuzzy.cz/cs/projekty/git-uzivatelska-prirucka/');" target="_blank">http://www.fuzzy.cz/cs/projekty/git-uzivatelska-prirucka/</a></p>
+<p><a href="https://github.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://github.com/', 'https://github.com/');" target="_blank">https://github.com/</a></p>
+<p><a href="https://bitbucket.org/" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://bitbucket.org/', 'https://bitbucket.org/');" target="_blank">https://bitbucket.org/</a></p>
+<p><a href="http://windows.github.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://windows.github.com/', 'http://windows.github.com/');" target="_blank">http://windows.github.com/</a></p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fjakubzapletal.com%2Fzaciname-s-githubem%2F&amp;counturl=http%3A%2F%2Fjakubzapletal.com%2Fzaciname-s-githubem%2F&amp;count=horizontal&amp;text=Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20%5BCzech%5D%3A" style="width:101px; height:20px;" frameborder="0"></iframe></div></li><li class="share-facebook"><div class="fb-share-button" data-href="http://jakubzapletal.com/zaciname-s-githubem/" data-layout="button_count"></div></li><li class="share-google-plus-1"><div class="googleplus1_button"><div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 57px; height: 20px;" id="___plus_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 57px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I0_1507027003159" name="I0_1507027003159" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/sharebutton.htm" data-origwidth="100%" data-gapiattached="true" title="G+" width="100%" frameborder="0"></iframe></div></div></li><li class="share-end"></li></ul></div></div></div>				
+							        
+    </div> <!-- /post-content -->
+    
+	<div class="clear"></div>
+	
+		
+		<div class="post-cat-tags">
+					
+			<p class="post-categories">Categories: <a href="http://jakubzapletal.com/category/for-beginners/" rel="category tag">For beginners</a></p>
+		
+			<p class="post-tags">Tags: <a href="http://jakubzapletal.com/tag/bitbucket/" rel="tag">Bitbucket</a>, <a href="http://jakubzapletal.com/tag/branch/" rel="tag">branch</a>, <a href="http://jakubzapletal.com/tag/git/" rel="tag">Git</a>, <a href="http://jakubzapletal.com/tag/github/" rel="tag">GitHub</a>, <a href="http://jakubzapletal.com/tag/linux/" rel="tag">Linux</a>, <a href="http://jakubzapletal.com/tag/master/" rel="tag">master</a>, <a href="http://jakubzapletal.com/tag/repository/" rel="tag">repository</a>, <a href="http://jakubzapletal.com/tag/ssh/" rel="tag">SSH</a>, <a href="http://jakubzapletal.com/tag/windows/" rel="tag">Windows</a></p>
+		
+		</div>
+		
+	        
+</div> <!-- /post content-inner -->
+
+<div class="clear"></div>							
+				<div class="post-nav">
+				
+									
+						<a class="post-nav-newer" title="Next post: BDD – stop writing tests, let’s describe your app [Czech]" href="http://jakubzapletal.com/bdd-stop-writing-tests-lets-describe-your-app-czech/">BDD – stop writing tests, let’s describe your app [Czech] »</a>
+				
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /post-nav -->
+				
+				
+<div id="disqus_thread"><iframe id="dsq-app9748" name="dsq-app9748" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 712px; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 562px ! important;" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/a_002.htm" horizontalscrolling="no" verticalscrolling="no" data-origwidth="100%" width="100%" frameborder="0"></iframe></div>
+
+											                        
+		   	    
+	
+			</div> <!-- /post -->
+		
+	</div> <!-- /posts -->
+
+</div> <!-- /content section-inner -->
+		
+
+	<div class="footer section">
+		
+		<div class="footer-inner section-inner">
+		
+						
+				<div class="footer-a widgets">
+			
+					<div class="widget widget_twitter_timeline"><div class="widget-content"><h3 class="widget-title">Follow me on Twitter</h3><a class="twitter-timeline" data-widget-id="595012536287789057" data-theme="light" data-link-color="#ff7e00" data-border-color="#e8e8e8" data-chrome="noborders" data-tweet-limit="3" height="400" lang="EN">My Tweets</a></div><div class="clear"></div></div>					
+					<div class="clear"></div>
+					
+				</div>
+				
+			 <!-- /footer-a -->
+				
+						
+				<div class="footer-b widgets">
+			
+					<div class="widget widget_tag_cloud"><div class="widget-content"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://jakubzapletal.com/tag/bitbucket/" class="tag-link-3" title="1 topic" style="font-size: 8pt;">Bitbucket</a>
+<a href="http://jakubzapletal.com/tag/branch/" class="tag-link-4" title="1 topic" style="font-size: 8pt;">branch</a>
+<a href="http://jakubzapletal.com/tag/git/" class="tag-link-5" title="1 topic" style="font-size: 8pt;">Git</a>
+<a href="http://jakubzapletal.com/tag/github/" class="tag-link-6" title="1 topic" style="font-size: 8pt;">GitHub</a>
+<a href="http://jakubzapletal.com/tag/linux/" class="tag-link-7" title="1 topic" style="font-size: 8pt;">Linux</a>
+<a href="http://jakubzapletal.com/tag/master/" class="tag-link-8" title="1 topic" style="font-size: 8pt;">master</a>
+<a href="http://jakubzapletal.com/tag/repository/" class="tag-link-9" title="1 topic" style="font-size: 8pt;">repository</a>
+<a href="http://jakubzapletal.com/tag/ssh/" class="tag-link-10" title="1 topic" style="font-size: 8pt;">SSH</a>
+<a href="http://jakubzapletal.com/tag/windows/" class="tag-link-11" title="1 topic" style="font-size: 8pt;">Windows</a></div>
+</div><div class="clear"></div></div>					
+					<div class="clear"></div>
+					
+				</div>
+							
+			 <!-- /footer-b -->
+								
+						
+				<div class="footer-c widgets">
+			
+					<div class="widget widget_rss"><div class="widget-content"><h3 class="widget-title"><a class="rsswidget" href="http://www.planet-php.org/rss/"><img style="border:0" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/rss.png" alt="RSS" width="14" height="14"></a> <a class="rsswidget" href="http://planet-php.net/">Planet PHP</a></h3><ul><li><a class="rsswidget" href="http://feedproxy.google.com/%7Er/VoicesOfTheElephpant/%7E3/HBHmQcP9Aek/">Interview with Chris Pitt - Voices of the ElePHPant</a> <span class="rss-date">October 2, 2017</span></li><li><a class="rsswidget" href="https://nomadphp.com/tackling-beast-graduallyupgrade-legacy-code-base-php-7/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=tackling-beast-graduallyupgrade-legacy-code-base-php-7">Tackling the Beast: How to GraduallyUpgrade a Legacy Code Base to PHP 7 - Nomad PHP</a> <span class="rss-date">September 30, 2017</span></li><li><a class="rsswidget" href="http://feedproxy.google.com/%7Er/VoicesOfTheElephpant/%7E3/vj8qBMM-rKI/">Interview with Matthew Weier O’Phinney - Voices of the ElePHPant</a> <span class="rss-date">September 29, 2017</span></li><li><a class="rsswidget" href="http://php.net/index.php#id2017-09-29-1">PHP 7.1.10 Release Announcement - PHP: Hypertext Preprocessor</a> <span class="rss-date">September 29, 2017</span></li><li><a class="rsswidget" href="http://feeds.liip.ch/%7Er/liip_blog_php/%7E3/mPFe4FQfM4w/magento-2-config-search.html">Magento 2 Config Search - Liip</a> <span class="rss-date">September 28, 2017</span></li></ul></div><div class="clear"></div></div>					
+					<div class="clear"></div>
+					
+				</div>
+				
+			 <!-- /footer-c -->
+			
+			<div class="clear"></div>
+		
+		</div> <!-- /footer-inner -->
+	
+	</div> <!-- /footer -->
+
+
+<div class="credits section">
+
+	<div class="credits-inner section-inner">
+
+		<p class="credits-left">
+		
+			<span>Copyright</span> © 2017 <a href="http://jakubzapletal.com/" title="Jakub Zapletal">Jakub Zapletal</a>
+		
+		</p>
+		
+		<p class="credits-right">
+			
+			<span>Theme by <a href="http://www.andersnoren.se/">Anders Noren</a> — </span><a title="To the top" class="tothetop">Up ↑</a>
+			
+		</p>
+		
+		<div class="clear"></div>
+	
+	</div> <!-- /credits-inner -->
+	
+</div> <!-- /credits -->
+
+		<script type="text/javascript">
+			!function(d,s,id){
+				var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+				if(!d.getElementById(id)){
+					js=d.createElement(s);
+					js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}(document,"script","twitter-wjs");
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+		<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = 
+d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = 
+d.createElement(s); js.id = id; js.src = 
+'//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3';
+ fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 
+'facebook-jssdk'));</script>			<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+			<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/comment-reply.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/photon.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/flexslider.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/mediaelement-and-player.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/global.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var embedVars = 
+{"disqusConfig":{"platform":"wordpress@4.2.16","language":""},"disqusIdentifier":"5
+ 
+http:\/\/jakubzapletal.com\/?p=5","disqusShortname":"jakubzapletal","disqusTitle":"Za\u010d\u00edn\u00e1me
+ s GitHubem 
+[Czech]","disqusUrl":"http:\/\/jakubzapletal.com\/zaciname-s-githubem\/","options":{"manualSync":false},"postId":"5"};
+/*
+ ]]> */
+</script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/disqus.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"jakubzapletal"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/count.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/sharing.js"></script>
+<script type="text/javascript" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/e-201740.js" async="" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.5.2',blog:'90704535',post:'5',tz:'1',srv:'jakubzapletal.com'} ]);
+	_stq.push([ 'clickTrackerInit', '90704535', '5' ]);
+</script>
+
+
+<img src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/g.gif" alt=":)" id="wpstats" width="6" height="5"><iframe name="oauth2relay494819070" id="oauth2relay494819070" src="Za%C4%8D%C3%ADn%C3%A1me%20s%20GitHubem%20[Czech]%20_%20Jakub%20Zapletal_files/postmessageRelay.htm" style="width: 1264px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><iframe style="display: none; width: 1264px;"></iframe></body></html>
